@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Script : MonoBehaviour {
+	
+	public Rigidbody2D myRigidbody;
 
-	// Use this for initialization
-	void Start () {
+	public float jump;
+
+	void Start () 
+	{
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Update () 
+	{
+		if (Input.GetKeyDown(KeyCode.space) == true)
+		{
+			myRigidbody.velocity = vector2.up * jump;
+		}
 	}
 }
